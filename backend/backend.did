@@ -1,0 +1,11 @@
+type Reward = 
+ record {
+   amount: float64;
+   timestamp: int;
+ };
+service : {
+  getRewardsHistory: () -> (vec Reward) query;
+  getTotalRewards: () -> (float64) query;
+  getTotalStaked: () -> (float64) query;
+  stake: (float64) -> ();
+}
